@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noticia Text', serif;
+}
+body {
+  background: #f5f5f5;
+}
+.header {
+    height:60px;
+    width:100%;  
+    background-color: rgb(138, 138, 138); 
+}
+.header h1{
+    
+    padding: 3px;
+    float: left;
+    margin-left: 2%;
+    color: #000;
+}
+.nav{
+    float: right;
+    margin-top: 12px;
+    margin-right: 150px;
+    text-align: center;
+  }
+  .nav ul {   
+      list-style: none;
+  }
+  .nav ul :hover {
+      list-style: none;
+      color: rgb(255, 255, 255);
+      cursor: pointer;;
+  }
+  .nav ul li {
+      display: inline-block;
+      margin-left: 25px;
+  }
+  .nav ul li a {
+      text-decoration: none;
+      font-size: 20px;
+      color: black;   
+      display:block;
+  }
+  .nav .fa{
+      margin-left: 8px;
+  }
+  .owl-carousel {
+    width: 100%;
+    height: 100vh;
+}
+.slide {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.slide-1 {
+    background-image: url(../slide1.jpg);
+}
+
+.slide-2 {
+    background-image: url(../slide2.jpg);
+}
+
+.slide-3 {
+    background-image: url(../slide3.jpg);
+}
+.slide-content {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    padding: 0 20%;
+}
+
+.slide-content h1 {
+  font-family: 'Redressed', cursive;
+    font-size: 45px;
+    margin-left: 60PX;
+    
+}
+.slide-content p{
+  font-size: 30px;
+  color: #ebcaca;
+  font-family: 'Noticia Text', serif;}
+.owl-dots {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 1%;
+}
+.owl-prev, .owl-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff !important;
+  font-size: 65px !important;
+  font-weight: bolder !important;
+  background:none !important;
+}
+.owl-prev {
+  left: 1%;
+}
+.owl-next {
+ right: 1%;
+}
+.Grid {
+    width: 850px;
+    margin: 60px auto;
+}
+.Grid-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+  .Card {
+    position: relative;
+    background-color: #fff;
+    padding-bottom: 60px;
+    transition: background-color 0.2s cubic-bezier(0.5, 0.3, 0.8, 0.06);
+    color: #000;
+  }
+  .Card-thumb {
+    position: relative;
+    width: 240px;
+    height: 160px;
+    perspective: 600px;
+    z-index: 1;
+  }
+  .Card-image,
+  .Card-shadow {
+    position: absolute;
+    display: block;
+    width: 240px;
+    height: 160px;
+    transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
+  }
+  .Card-image {
+    position: relative;
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #607d8b;
+  }
+  .Card-title,
+  .Card-explore {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 80PX;
+    text-align: center;
+     
+  }
+  .Card-title span,
+  .Card-explore span {
+    padding:8PX;
+    flex: 1 1 auto;
+    text-align: center;
+    font-family: sans-serif;
+  }
+  .Card-explore {
+    opacity: 0;
+    transform: translate(0, -16px);
+    font-size: 12PX;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #673ab7;
+  }
+  .Card-button {
+    position: absolute;
+    left: 50%;
+    top: 5rem;
+    padding: 8px 16px;
+    background-color: #fff;
+    border-radius: 2rem;
+    border: 2px solid #3f51b5;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    transform: translate(-50%, 32px);
+    transition: all 0.2s;
+    opacity: 0;
+    font-family: sans-serif;
+    z-index: 4;
+  }
+  .Card:hover .Card-title,
+  .Card--active .Card-title {
+    opacity: 0;
+  }
+  .Card:hover .Card-explore,
+  .Card--active .Card-explore {
+    opacity: 1;
+    transform: translate(0, 5px);        
+  }
+  .Card:hover .Card-image,
+  .Card--active .Card-image {
+    transform: scale(1.05) translate(0, -5px) rotatex(25deg);
+  }
+ 
+  .Card:hover .Card-button,
+  .Card--active .Card-button {
+    opacity: 1;
+    color: #3f51b5;
+    transform: translate(-50%, 0);
+  }
+  .Card:hover .Card-button:hover,
+  .Card--active .Card-button:hover {
+    color: #fff;
+    background-color: #3f51b5;
+  }
+  
+  
+  
